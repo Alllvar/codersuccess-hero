@@ -40,8 +40,9 @@ button {
 }
 
 .nav-bar {
-  position: relative;
-  z-index: 30;
+  position: sticky;
+  top: 0;
+  z-index: 60;
   height: 80px;
   background: linear-gradient(90deg, var(--nav-1), var(--nav-2), var(--nav-3));
 }
@@ -205,7 +206,7 @@ button {
   position: relative;
   background-size: cover;
   background-position: center;
-  min-height: 620px;
+  min-height: 720px;
   padding: 80px 0;
   display: flex;
   align-items: center;
