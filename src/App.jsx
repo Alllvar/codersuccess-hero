@@ -6,6 +6,7 @@ import emergency from './assets/emergency.png'
 import drain from './assets/drain.png'
 import heaters from './assets/heaters.png'
 import detection from './assets/detection.png'
+import worker from './assets/worker.png'
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -93,7 +94,9 @@ function App() {
               </button>
             </div>
           </div>
-          <div className="hero-right" aria-hidden="true" />
+          <div className="hero-right animate__animated animate__fadeIn">
+            <img className="hero-worker" src={worker} alt="Plumber at work" />
+          </div>
         </div>
       </section>
 

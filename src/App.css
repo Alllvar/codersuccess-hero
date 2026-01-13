@@ -20,8 +20,9 @@
 body {
   margin: 0;
   font-family: 'Space Grotesk', 'Gill Sans', 'Trebuchet MS', sans-serif;
-  background: #061630;
+  background: linear-gradient(90deg, var(--nav-1), var(--nav-2), var(--nav-3));
   color: var(--ink);
+  overflow-x: hidden;
 }
 
 img {
@@ -45,6 +46,9 @@ button {
   z-index: 60;
   height: 80px;
   background: linear-gradient(90deg, var(--nav-1), var(--nav-2), var(--nav-3));
+
+  border-bottom: 6px solid;
+  border-image: linear-gradient(90deg, #4a6684, #9fb5ca, #b6c0c9) 1;
 }
 
 .nav-inner {
@@ -206,10 +210,12 @@ button {
   position: relative;
   background-size: cover;
   background-position: center;
-  min-height: 720px;
-  padding: 80px 0;
+  padding: 80px 0 0;
   display: flex;
-  align-items: center;
+  align-items: stretch;
+
+  border-bottom: 6px solid;
+  border-image: linear-gradient(90deg, #4a6684, #9fb5ca, #b6c0c9) 1;
 }
 
 .hero::before {
@@ -236,6 +242,10 @@ button {
 .hero-left,
 .hero-right {
   flex: 1;
+}
+
+.hero-left {
+  padding-bottom: 80px;
 }
 
 .hero-title {
@@ -281,10 +291,22 @@ button {
 
 .hero-right {
   min-height: 240px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-left: 24px;
+  align-self: flex-end;
+}
+
+.hero-worker {
+  width: 130%;
+  filter: drop-shadow(0 18px 28px rgba(3, 10, 25, 0.45));
 }
 
 .service-strip {
   position: relative;
+  border-bottom: 6px solid;
+  border-image: linear-gradient(90deg, #4a6684, #9fb5ca, #b6c0c9) 1;
 }
 
 .strip-container {
@@ -437,7 +459,7 @@ button {
 
 @media (max-width: 900px) {
   .hero {
-    padding: 64px 0;
+    align-items: center;
   }
 
   .hero-inner {
@@ -445,9 +467,16 @@ button {
     align-items: flex-start;
   }
 
+  .hero-left {
+    padding-bottom: 0;
+  }
+
   .hero-right {
     width: 100%;
     min-height: 160px;
+    padding-left: 0;
+    margin-top: 24px;
+    align-self: stretch;
   }
 
   .service-strip {
