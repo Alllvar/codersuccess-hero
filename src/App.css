@@ -548,6 +548,10 @@ button {
   .nav-cta-mobile {
     margin-top: 20px;
   }
+
+  .hero-worker {
+    width: 100%;
+  }
 }
 
 @media (max-width: 640px) {
