@@ -57,9 +57,29 @@ function App() {
                 <span>Financing</span>
               </div>
             </div>
-            <button type="button" className="nav-cta nav-cta-mobile">
-              GET A QUOTE
-            </button>
+            <div className="nav-item-buttons">
+              <a
+                  className="hero-btn1 secondary1"
+                  href="tel:1234567890"
+                  aria-label="Call 123-456-7890"
+              >
+                <span className="call-cta-label">CALL NOW</span>
+                <span className="call-cta-line">
+                  <span className="call-cta-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="img" focusable="false">
+                      <path
+                          d="M6.6 3.75c.35-.18.77-.15 1.09.07l2.8 2.05c.36.27.51.74.36 1.16l-.9 2.48a.94.94 0 0 0 .22 1c1.2 1.36 2.54 2.51 4.04 3.46.35.22.79.25 1.16.08l2.4-1.1c.4-.18.87-.1 1.2.2l2.12 2.02c.3.29.4.73.27 1.12-.46 1.34-1.52 2.3-2.88 2.65-1.82.46-3.75.23-5.77-.7-2.19-1-4.2-2.5-6.03-4.5-1.81-2.01-3.16-4.17-4.06-6.5-.83-2.13-1-4.06-.5-5.79.37-1.33 1.34-2.35 2.68-2.8z"
+                          fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                  <span className="call-cta-number">123-456-7890</span>
+                </span>
+              </a>
+              <button type="button" className="nav-cta nav-cta-mobile">
+                GET A QUOTE
+              </button>
+            </div>
           </nav>
           <div className="nav-actions">
             <button
