@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import logo from './assets/logo.png'
 import heroBg from './assets/background.png'
+import bottomBg from './assets/bottom-background.png'
 import emergency from './assets/emergency.png'
 import drain from './assets/drain.png'
 import heaters from './assets/heaters.png'
@@ -82,7 +83,7 @@ function App() {
 
       <section className="hero" style={{ backgroundImage: `url(${heroBg})` }}>
         <div className="hero-inner">
-          <div className="hero-left animate__animated animate__backInLeft">
+          <div className="hero-left animate__animated animate__fadeInDown">
             <h1 className="hero-title">Reliable Plumbing Services</h1>
             <p className="hero-subtitle">Your Trusted Local Plumber</p>
             <div className="hero-actions">
@@ -94,13 +95,17 @@ function App() {
               </button>
             </div>
           </div>
-          <div className="hero-right animate__animated animate__fadeIn">
+          <div className="hero-right">
             <img className="hero-worker" src={worker} alt="Plumber at work" />
           </div>
         </div>
       </section>
 
-      <section className="service-strip">
+      <section className="service-strip" style={{
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundImage: `url(${bottomBg})`
+      }}>
         <div className="service-inner">
           <div className="service-item">
             <img src={emergency} alt="Emergency plumbing" />
